@@ -118,6 +118,7 @@ class TodoListViewController: UITableViewController {
         let request: NSFetchRequest<Item> = Item.fetchRequest()
         let predicate = NSPredicate(format: "parentCategory.name MATCHES %@", selectedCategory!.name ?? "none")
         request.predicate = predicate
+        //n
         
         do {
             arrayItem = try context.fetch(request)
